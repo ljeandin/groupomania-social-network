@@ -1,43 +1,43 @@
-Ceci est le code source du projet 7 du parcours développeur web d'Openclassrooms.
-Les technologies utilisées pour ce projet sont :
+This is the source code for a fictive company's social network.
+This is a full-stack project created using :
 
 -   Frontend : VueJs
--   Backend : NodeJs + express
--   Base de données : Mysql
+-   Backend : NodeJs + Express
+-   Database : Mysql
 
 ## Frontend
 
-Ouvrez le dossier Frontend dans le terminal de votre éditeur puis exécutez la commande:
+Open the "frontend" folder in your terminal and execute the command :
 
     vue ui
 
-si le navigateur ne s'ouvre pas automatiquement aller à :
+if the page doesn't automatically open, go to :
 
 -   http://localhost:8080/
 
-puis cliquez sur "Tâches" puis "serve" puis "Lancer la tâche" et enfin "Ouvrir l'app"
+then click on "Tasks" then "serve" then "Run the task" and finally "Open the app"
 
 ## Backend
 
-Ouvrez le dossier backend dans le terminal de votre éditeur puis exécutez la commande:
+Open the "backend" folder in your terminal and execute the command:
 
     npm install
 
-puis
+then
 
     node server ou nodemon server
 
-## Base de données
+## Database
 
-Connectez-vous au serveur MySql de votre choix.
+Connect to your favourite Mysql Server.
 
-Dans le dossier backend, créez un fichier .env dans lequel vous inquerez :
+In the "backend" folder, create a .env file in which you'll write :
 
-    PASSWORD = (votre mot de passe)
-    NAME = (votre nom d'user, souvent 'root')
+    PASSWORD = (your password)
+    NAME = (your username, often 'root')
 
-Créez une base de données nommée `groupomaniadb`.
+Create a database named `groupomaniadb`.
 
-Y importer le fichier `groupomaniadb.sql` que vous trouverez dans le dossier backend.
+Import the file `groupomaniadb.sql` to it (you'll find the file in the "backend" folder).
 
-Si la connexion à la base de données est bien établie, alors la console affichera `"The solution is: 2"` (voir backend/models/db:16).
+If the connexion with the database is working, the terminal will print `"The solution is: 2"` (see backend/models/db:16).
