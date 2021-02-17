@@ -1,4 +1,4 @@
-This is the source code for a fictive company's social network.
+This is the source code for a fictive company's internal social network.
 This is a full-stack project created using :
 
 -   Frontend : VueJs
