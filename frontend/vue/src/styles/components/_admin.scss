@@ -1,0 +1,117 @@
+//this stylesheet styles the buttons for the moderator
+.adminLine {
+    margin-left: auto;
+    display: flex;
+}
+.adminDelete {
+    width: 50px;
+    margin-bottom: 10px;
+    padding: 0;
+    border-radius: 50%;
+    //centering the icon
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: 30px;
+    i {
+        color: $admin-delete;
+    }
+
+    :hover {
+        cursor: pointer;
+    }
+
+    @include respond(mobileLandscape) {
+        width: 40px;
+        height: 40px;
+        margin-left: 15px;
+    }
+
+    &__comments {
+        margin-left: auto;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.adminApprove {
+    width: 50px;
+    margin-bottom: 10px;
+    padding: 0;
+    border-radius: 50%;
+    //centering the icon
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: 30px;
+
+    i {
+        color: $admin-approve;
+    }
+
+    :hover {
+        cursor: pointer;
+    }
+
+    @include respond(mobileLandscape) {
+        width: 40px;
+        height: 40px;
+        margin-left: 15px;
+    }
+}
+
+.report {
+    width: 50px;
+    margin-bottom: 10px;
+    padding: 0;
+    border-radius: 50%;
+    //centering the icon
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: 30px;
+
+    i {
+        color: $accent-color;
+    }
+
+    :hover {
+        cursor: pointer;
+    }
+
+    @include respond(mobileLandscape) {
+        width: 40px;
+        height: 40px;
+        margin-left: 15px;
+    }
+}
+
+.adminReport {
+    width: 50px;
+    margin-bottom: 10px;
+    padding: 0;
+    border-radius: 50%;
+    //centering the icon
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: 30px;
+
+    i {
+        color: $admin-reported;
+    }
+
+    @include respond(mobileLandscape) {
+        width: 40px;
+        height: 40px;
+        margin-left: 15px;
+    }
+}
