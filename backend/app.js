@@ -16,7 +16,7 @@ const app = express();
 app.use(enforce.HTTPS({ trustProtoHeader: true }));
 
 //serving production compiled files
-app.use(serveStatic(__dirname + "/dist"));
+app.use(serveStatic(__dirname + "/frontend/build"));
 
 app.use(history());
 
