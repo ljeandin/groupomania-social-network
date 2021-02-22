@@ -1,6 +1,9 @@
 const express = require("express"); //well, you know what that's for
 const bodyParser = require("body-parser"); // body parser to read form input and storing it as JS object
 const path = require("path"); // path is used to make path manipulation easier
+const serveStatic = require("serve-static");
+const history = require("connect-history-api-fallback");
+const enforce = require("express-sslify");
 
 //Declaring routes
 const userRoutes = require("./routes/user.routes");
@@ -8,6 +11,14 @@ const feedRoutes = require("./routes/feed.routes");
 
 //Using express
 const app = express();
+
+//using https
+app.use(enforce.HTTPS({ trustProtoHeader: true }));
+
+//serving production compiled files
+app.use(serveStatic(__dirname + "/dist"));
+
+app.use(history());
 
 //headers for avoiding CORS problems
 app.use((req, res, next) => {

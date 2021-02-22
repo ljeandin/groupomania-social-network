@@ -49,4 +49,4 @@ server.on("listening", () => {
     console.log("Listening on " + bind); //confirmation message
 });
 
-server.listen(port); //server will listen on specified port
+server.listen(process.env.PORT || port); //server will listen on specified port
