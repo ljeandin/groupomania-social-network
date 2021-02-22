@@ -1,7 +1,6 @@
 const express = require("express"); //well, you know what that's for
 const bodyParser = require("body-parser"); // body parser to read form input and storing it as JS object
 const path = require("path"); // path is used to make path manipulation easier
-const serveStatic = require("serve-static");
 const history = require("connect-history-api-fallback");
 const enforce = require("express-sslify");
 
@@ -16,7 +15,7 @@ const app = express();
 app.use(enforce.HTTPS({ trustProtoHeader: true }));
 
 //serving production compiled files
-app.use(serveStatic(__dirname + "/frontend/build"));
+app.use(express.static(path.join(__dirname, "../frontend/build")));
 
 app.use(history());
 
@@ -45,5 +44,9 @@ app.use("/images", express.static(path.join(__dirname, "images")));
 app.use("/api/user", userRoutes);
 //path to feed-related routes
 app.use("/api/feed", feedRoutes);
+
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname + "/../frontend/build/index.html"));
+});
 
 module.exports = app;
